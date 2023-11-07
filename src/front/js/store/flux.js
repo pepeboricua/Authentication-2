@@ -48,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			};
 		
 			try{
-			   const resp = await fetch('https://crispy-spoon-r9rr99rpwvv2gpg-3001.app.github.dev/api/token', opts)
+			   const resp = await fetch(process.env.BACKEND_URL + '/api/token', opts)
 					if (resp.status !== 200){
 						alert("There has been some error");
 						return false;
